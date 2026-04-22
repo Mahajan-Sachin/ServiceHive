@@ -15,11 +15,11 @@ GROQ_API_KEY   = os.getenv("GROQ_API_KEY")
 if GEMINI_API_KEY:
     from langchain_google_genai import ChatGoogleGenerativeAI
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model="gemini-2.0-flash",
         google_api_key=GEMINI_API_KEY,
         temperature=0.3
     )
-    print("[LLM] Using: Gemini 1.5 Flash (Google AI)")
+    print("[LLM] Using: Gemini 2.0 Flash (Google AI)")
 
 elif GROQ_API_KEY:
     from langchain_groq import ChatGroq
